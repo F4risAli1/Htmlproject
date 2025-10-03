@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+nav {
+    background-color: #333;
+    padding: 1rem;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    margin: 0 1rem;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+h1 {
+    animation: zoomIn;
+    animation-duration: 1s;
+    color: #333;
+    margin-bottom: 1rem;
+}
+p {
+    animation: slideInLeft;
+    animation-duration: 1s;
+    animation-delay: 0.7s;
+    animation-fill-mode: both;
+    margin-bottom: 1rem;
+}
