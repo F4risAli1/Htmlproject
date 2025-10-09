@@ -1,0 +1,311 @@
+/* style.css - Shared styles for all theme park pages */
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: linear-gradient(to right, #8E2DE2, #4A00E0);
+    line-height: 1.6;
+    color: #333;
+}
+
+nav {
+    background: linear-gradient(to right, #C33764, #1D2671);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 24px;
+    transition: top 0.3s;
+}
+
+/* Hide nav when scrolling down, show when scrolling up */
+.hide-nav nav {
+    top: -100px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    gap: 12px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul a {
+    background-color: white;
+    color: #C33764;
+    border: 2px solid #ff6b00;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(255, 107, 0, 0.15);
+    display: block;
+    text-align: center;
+}
+
+nav ul a:hover {
+    background-color: #ff6b00;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 107, 0, 0.25);
+}
+
+ul {
+    list-style-position: inside;
+}
+
+/* Header styles */
+.header {
+    background: linear-gradient(to left, #C33764, #1D2671);
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+    font-size: 2.2em;
+    margin-bottom: 8px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+    margin-bottom: 0;
+}
+
+/* Button styles */
+.refresh-btn {
+    background-image: linear-gradient(to right, #C33764, #1D2671);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(255, 107, 0, 0.3);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.refresh-btn:hover {
+    background-color: #e55a00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 107, 0, 0.4);
+}
+
+.refresh-btn:active {
+    transform: translateY(0);
+}
+
+.refresh-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Navigation styles */
+.park-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    background-color: white;
+    color: #333;
+    border: 2px solid #ff6b00;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #ff6b00;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Land/area styles */
+.land {
+    background: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    border-left: 5px solid #ff6b00;
+}
+
+.land h3 {
+    color: #ff6b00;
+    border-bottom: 2px solid #ff6b00;
+    padding-bottom: 8px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+/* Ride styles */
+.ride {
+    margin: 12px 0;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #ddd;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.ride:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.ride::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: currentColor;
+    opacity: 0.1;
+}
+
+/* Wait time color coding */
+.low-wait { 
+    background-color: #d4edda; 
+    border-left-color: #28a745;
+    color: #155724;
+}
+
+.medium-wait { 
+    background-color: #fff3cd; 
+    border-left-color: #ffc107;
+    color: #856404;
+}
+
+.high-wait { 
+    background-color: #f8d7da; 
+    border-left-color: #dc3545;
+    color: #721c24;
+}
+
+.closed { 
+    background-color: #e9ecef; 
+    border-left-color: #6c757d;
+    color: #495057;
+}
+
+.wait-time {
+    font-weight: bold;
+    float: right;
+    font-size: 1.1em;
+    padding: 4px 8px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.3);
+}
+
+/* Status and loading styles */
+.loading {
+    text-align: center;
+    padding: 50px;
+    font-size: 18px;
+    color: #666;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.loading::after {
+    content: '...';
+    animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% { color: rgba(0,0,0,0); text-shadow: .25em 0 0 rgba(0,0,0,0), .5em 0 0 rgba(0,0,0,0); }
+    40% { color: #666; text-shadow: .25em 0 0 rgba(0,0,0,0), .5em 0 0 rgba(0,0,0,0); }
+    60% { text-shadow: .25em 0 0 #666, .5em 0 0 rgba(0,0,0,0); }
+    80%, 100% { text-shadow: .25em 0 0 #666, .5em 0 0 #666; }
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border-left: 4px solid #dc3545;
+    margin: 20px 0;
+}
+
+.error h3 {
+    margin-bottom: 10px;
+    color: #721c24;
+}
+
+/* Last updated footer */
+.last-updated {
+    text-align: center;
+    color: #ffffffff;
+    font-size: 14px;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+
+/* fade in animation for table */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.land {
+    animation: fadeIn 0.5s;
+}
+
+.ride {
+    animation: fadeIn 0.3s;
+}
+
+
+
