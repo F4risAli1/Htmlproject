@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chessington Wait Times</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="thorpe.html" class="active">🧭 Thorpe Park</a></li>
+            <li><a href="chessington.html">🦁 Chessington World of Adventures</a></li>
+        </ul>
+        
+    </nav>
+    <div class="header">
+        <h1>🧭 Chessington Wait Times</h1>
+        <p>Live queue times and ride status</p>
+    </div>
+    
+    <button class="refresh-btn" onclick="loadChessingtonQueueTimes()">
+        🔄 Refresh Wait Times
+    </button>
+    
+    <div id="wait-times">
+        <div class="loading">Loading Chessington wait times...</div>
+    </div>
+
+    <script src="chessingtonwaits.js" parkID="3"></script>
+</body>
+</html>
+
